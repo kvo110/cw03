@@ -1,0 +1,181 @@
+/*
+  styles.css
+  CW03 - Main theme + Exercise 1 + Exercise 2 + Exercise 5
+  Keeping colors consistent using CSS variables so the page looks put together.
+*/
+
+:root {
+  --bg: #fff7f2;
+  --surface: #ffffff;
+  --border: #ead6cf;
+  --muted: #5b3b3b;
+  --accent: #7a1f1f;
+  --shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
+
+  --table-head: #2f2f2f;
+  --table-border: #e3e3e3;
+
+  --pill-class: #e8f1ff;
+  --pill-lab: #f3e8ff;
+  --pill-study: #e8fff0;
+  --pill-work: #fff1e8;
+  --pill-gym: #fff7cc;
+  --pill-lunch: #ffe8ee;
+  --pill-meeting: #e8fbff;
+  --pill-free: #f1f1f1;
+}
+
+/* Exercise 1 requirement: text color dark red via external CSS */
+body {
+  color: darkred;
+  font-family: "Roboto", system-ui, -apple-system, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background: var(--bg);
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.site-header {
+  padding: 18px 0;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.85rem;
+  color: var(--accent);
+}
+
+.subtitle {
+  margin: 6px 0 0 0;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+.tight {
+  margin: 8px 0;
+}
+
+/* Exercise 2 requirement: answer container using box-shadow */
+.answer-box {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  margin-top: 12px;
+}
+
+.code-block {
+  margin: 10px 0 0 0;
+  background: #111;
+  color: #f3f3f3;
+  border-radius: 10px;
+  padding: 12px;
+  overflow-x: auto;
+  line-height: 1.5;
+  font-size: 0.92rem;
+}
+
+/* Exercise 5 timetable */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  min-width: 720px;
+}
+
+.timetable caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 10px;
+  color: var(--accent);
+}
+
+.timetable th,
+.timetable td {
+  border: 1px solid var(--table-border);
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.timetable thead th {
+  background: var(--table-head);
+  color: #ffffff;
+  text-align: left;
+}
+
+.timetable tbody th {
+  background: #fafafa;
+  width: 110px;
+}
+
+.cell {
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.cell.class {
+  background: var(--pill-class);
+}
+
+.cell.lab {
+  background: var(--pill-lab);
+}
+
+.cell.study {
+  background: var(--pill-study);
+}
+
+.cell.work {
+  background: var(--pill-work);
+}
+
+.cell.gym {
+  background: var(--pill-gym);
+}
+
+.cell.lunch {
+  background: var(--pill-lunch);
+}
+
+.cell.meeting {
+  background: var(--pill-meeting);
+}
+
+.cell.free {
+  background: var(--pill-free);
+}
+
+.site-footer {
+  padding: 18px 0 26px 0;
+  color: var(--muted);
+}

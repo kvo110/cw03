@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+  index.html
+  CW03 - All Exercises 1–5 on one page
+  Notes: themed using CSS variables in styles.css
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CW03 - Exercises 1–5</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="lyrics.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>CW03 Assignment</h1>
+      <p class="subtitle">Exercises 1–5 (all answers on one page)</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card" id="ex1">
+      <h2>Exercise 1: External Style Sheet</h2>
+      <p>
+        This page uses an external stylesheet (<span class="mono">styles.css</span>) that sets the
+        <strong>body text color to dark red</strong>.
+      </p>
+
+      <div class="answer-box">
+        <p class="mono">
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+        </p>
+        <p>
+          This paragraph demonstrates the dark red text color applied via external CSS.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="ex2">
+      <h2>Exercise 2: Debugging CSS</h2>
+      <p>
+        Below are the 3 mistakes and what to change. I also used a styled answer container with
+        <span class="mono">box-shadow</span>.
+      </p>
+
+      <div class="answer-box">
+        <p><strong>Mistake 1:</strong> <span class="mono">font-family</span> has no fallback fonts.</p>
+        <p class="mono">Fix: font-family: "Times New Roman", Times, serif;</p>
+
+        <p><strong>Mistake 2:</strong> Missing semicolon after <span class="mono">color: red</span> in <span
+            class="mono">body</span>.</p>
+        <p class="mono">Fix: color: red;</p>
+
+        <p><strong>Mistake 3:</strong> Missing semicolon after <span class="mono">box-sizing: border-box</span> in <span
+            class="mono">.container</span>.</p>
+        <p class="mono">Fix: box-sizing: border-box;</p>
+      </div>
+
+      <div class="answer-box">
+        <p class="tight"><strong>Corrected CSS (clean version):</strong></p>
+        <pre class="code-block"><code>body {
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: justify;
+  background: ivory;
+  color: red;
+}
+
+h1, h2, h3 {
+  color: #ff0000;
+  font-size: 2.5em;
+  margin: 20px 0px 20px 0px;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+a {
+  color: #0000FF;
+  text-decoration: underline;
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="card" id="ex3">
+      <h2>Exercise 3: Song Lyrics Styling</h2>
+      <p>
+        Song content is styled using the required classes:
+        <span class="mono">.artist</span>, <span class="mono">.song-title</span>, <span class="mono">.album</span>,
+        <span class="mono">.year</span>, <span class="mono">.verse</span>, <span class="mono">.chorus</span>.
+      </p>
+
+      <div class="lyrics-card">
+        <div class="artist">Blinding Lights</div>
+        <div class="song-title">The Weeknd</div>
+        <div class="album">After Hours</div>
+        <div class="year">2020</div>
+
+        <p class="verse">I been tryna call, I been on my own for long enough</p>
+        <p class="verse">Maybe you can show me how to love, maybe</p>
+        <p class="verse">I'm going through a crisis, I thought I'd see the light</p>
+        <p class="chorus">But there's nothing but blinding lights</p>
+        <p class="verse">I'm looking for something that I can't see</p>
+        <p class="verse">Maybe you can show it to me, maybe</p>
+        <p class="verse">I'm going through a crisis, I thought I'd see the light</p>
+        <p class="chorus">But there's nothing but blinding lights</p>
+      </div>
+    </section>
+
+    <section class="card" id="ex4">
+      <h2>Exercise 4: External Stylesheet</h2>
+      <p>
+        The lyrics styling above is handled by a separate external stylesheet:
+        <span class="mono">lyrics.css</span>. That keeps the HTML cleaner and makes it easier to reuse.
+      </p>
+
+      <div class="answer-box">
+        <p class="mono">&lt;link rel="stylesheet" href="lyrics.css"&gt;</p>
+        <p class="tight">
+          I kept the lyrics theme separate so the main page stays consistent while the song section matches
+          the assignment styling.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="ex5">
+      <h2>Exercise 5: School Website Design (Simple Timetable)</h2>
+      <p>
+        This is a simple timetable made with an HTML table and a small color system using CSS variables.
+      </p>
+
+      <div class="table-wrap">
+        <table class="timetable">
+          <caption>Weekly Timetable</caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Monday</th>
+              <th scope="col">Tuesday</th>
+              <th scope="col">Wednesday</th>
+              <th scope="col">Thursday</th>
+              <th scope="col">Friday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">9:00 AM</th>
+              <td class="cell class">Web Programming</td>
+              <td class="cell study">Study</td>
+              <td class="cell class">Operating Systems</td>
+              <td class="cell study">Study</td>
+              <td class="cell class">Programming Lang</td>
+            </tr>
+            <tr>
+              <th scope="row">11:00 AM</th>
+              <td class="cell lab">Lab</td>
+              <td class="cell class">Math</td>
+              <td class="cell lab">Lab</td>
+              <td class="cell class">Math</td>
+              <td class="cell meeting">Group Meeting</td>
+            </tr>
+            <tr>
+              <th scope="row">1:00 PM</th>
+              <td class="cell lunch">Lunch</td>
+              <td class="cell lunch">Lunch</td>
+              <td class="cell lunch">Lunch</td>
+              <td class="cell lunch">Lunch</td>
+              <td class="cell lunch">Lunch</td>
+            </tr>
+            <tr>
+              <th scope="row">3:00 PM</th>
+              <td class="cell gym">Gym</td>
+              <td class="cell work">Work</td>
+              <td class="cell gym">Gym</td>
+              <td class="cell work">Work</td>
+              <td class="cell free">Free</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="tight">CW03 - Index page containing Exercises 1–5</p>
+    </div>
+  </footer>
+</body>
+
+</html>

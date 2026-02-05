@@ -1,0 +1,59 @@
+/*
+  lyrics.css
+  Exercise 4 - External stylesheet for the lyrics section
+  I kept the required class rules exactly how the prompt asked.
+*/
+
+.lyrics-card {
+  background-color: chocolate;
+  border-radius: 14px;
+  padding: 18px;
+  margin-top: 12px;
+}
+
+.artist {
+  font-size: 14pt;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: moccasin;
+}
+
+.song-title {
+  font-size: 14pt;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: khaki;
+}
+
+.album {
+  font-size: 12pt;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: khaki;
+}
+
+.year {
+  font-size: 12pt;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: ivory;
+}
+
+.verse {
+  font-size: 14pt;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  color: gold;
+  margin-left: 2cm;
+  margin-right: 2cm;
+}
+
+.chorus {
+  font-size: 14pt;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: gold;
+  margin-left: 4cm;
+  margin-right: 4cm;
+}
