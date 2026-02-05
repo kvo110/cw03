@@ -1,7 +1,7 @@
 /*
   styles.css
   CW03 - Dark theme (purple gradient into midnight purple) + animated gradient
-  Update: nav bar is fixed to the very top and stays there while scrolling
+  Update: nav bar is fixed to the very top, stays there, and is centered
 */
 
 :root {
@@ -93,8 +93,10 @@ body {
   backdrop-filter: blur(10px);
 }
 
+/* Center the nav buttons */
 .nav-inner {
   display: flex;
+  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
   padding-top: 12px;
