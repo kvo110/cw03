@@ -2,6 +2,7 @@
   lyrics.css
   Exercise 4 - External stylesheet for the lyrics section
   I kept the required class rules exactly how the prompt asked.
+  Only small tweaks on the container so it fits the dark theme better.
 */
 
 .lyrics-card {
@@ -9,6 +10,9 @@
   border-radius: 14px;
   padding: 18px;
   margin-top: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
 }
 
 .artist {

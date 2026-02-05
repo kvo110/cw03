@@ -1,28 +1,34 @@
 /*
   styles.css
-  CW03 - Main theme + Exercise 1 + Exercise 2 + Exercise 5
-  Keeping colors consistent using CSS variables so the page looks put together.
+  CW03 - Dark theme (purple gradient into midnight purple) + animated gradient
+  Keeping Exercise 1 requirement: body text color is dark red via external CSS.
 */
 
 :root {
-  --bg: #fff7f2;
-  --surface: #ffffff;
-  --border: #ead6cf;
-  --muted: #5b3b3b;
-  --accent: #7a1f1f;
-  --shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
+  --bg-1: #2a0a5e;
+  --bg-2: #160038;
+  --bg-3: #0a001f;
 
-  --table-head: #2f2f2f;
-  --table-border: #e3e3e3;
+  --surface: rgba(18, 8, 36, 0.88);
+  --surface-2: rgba(12, 5, 26, 0.92);
+  --border: rgba(210, 190, 255, 0.18);
 
-  --pill-class: #e8f1ff;
-  --pill-lab: #f3e8ff;
-  --pill-study: #e8fff0;
-  --pill-work: #fff1e8;
-  --pill-gym: #fff7cc;
-  --pill-lunch: #ffe8ee;
-  --pill-meeting: #e8fbff;
-  --pill-free: #f1f1f1;
+  --muted: rgba(238, 230, 255, 0.72);
+  --accent: rgba(200, 170, 255, 0.92);
+
+  --shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+
+  --table-head: rgba(240, 230, 255, 0.10);
+  --table-border: rgba(240, 230, 255, 0.14);
+
+  --pill-class: rgba(120, 140, 255, 0.16);
+  --pill-lab: rgba(190, 120, 255, 0.16);
+  --pill-study: rgba(120, 255, 200, 0.14);
+  --pill-work: rgba(255, 170, 120, 0.14);
+  --pill-gym: rgba(255, 240, 120, 0.14);
+  --pill-lunch: rgba(255, 120, 170, 0.14);
+  --pill-meeting: rgba(120, 230, 255, 0.14);
+  --pill-free: rgba(255, 255, 255, 0.10);
 }
 
 /* Exercise 1 requirement: text color dark red via external CSS */
@@ -31,7 +37,28 @@ body {
   font-family: "Roboto", system-ui, -apple-system, Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
-  background: var(--bg);
+
+  /* Animated purple gradient into midnight purple */
+  background: linear-gradient(120deg, var(--bg-1), var(--bg-2), var(--bg-3), var(--bg-2));
+  background-size: 320% 320%;
+  animation: gradientShift 12s ease-in-out infinite;
+
+  min-height: 100vh;
+}
+
+/* Smooth animated gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .wrap {
@@ -44,10 +71,12 @@ body {
   padding: 18px 0;
 }
 
+/* Titles get a lighter color so they actually read on the dark gradient */
 .site-header h1 {
   margin: 0;
   font-size: 1.85rem;
-  color: var(--accent);
+  color: rgba(245, 240, 255, 0.96);
+  letter-spacing: 0.2px;
 }
 
 .subtitle {
@@ -62,12 +91,25 @@ body {
   padding: 18px;
   margin: 16px 0;
   box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
 }
 
+/* Keep headings readable on dark cards */
 .card h2 {
   margin: 0 0 10px 0;
   font-size: 1.25rem;
-  color: var(--accent);
+  color: rgba(235, 224, 255, 0.96);
+}
+
+.card p,
+.card li {
+  color: rgba(240, 232, 255, 0.88);
+}
+
+/* Exercise 1 demo: still shows dark red text clearly even on dark theme */
+#ex1 .answer-box p {
+  color: darkred;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
 }
 
 .mono {
@@ -81,23 +123,37 @@ body {
 
 /* Exercise 2 requirement: answer container using box-shadow */
 .answer-box {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
   margin-top: 12px;
+}
+
+.answer-box p {
+  color: rgba(240, 232, 255, 0.88);
 }
 
 .code-block {
   margin: 10px 0 0 0;
-  background: #111;
-  color: #f3f3f3;
+  background: rgba(0, 0, 0, 0.55);
+  color: rgba(245, 240, 255, 0.92);
   border-radius: 10px;
   padding: 12px;
   overflow-x: auto;
   line-height: 1.5;
   font-size: 0.92rem;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* Links */
+a {
+  color: rgba(190, 170, 255, 0.95);
+}
+
+a:hover {
+  color: rgba(230, 215, 255, 0.98);
 }
 
 /* Exercise 5 timetable */
@@ -117,7 +173,7 @@ body {
   text-align: left;
   font-weight: 700;
   padding-bottom: 10px;
-  color: var(--accent);
+  color: rgba(235, 224, 255, 0.96);
 }
 
 .timetable th,
@@ -129,18 +185,20 @@ body {
 
 .timetable thead th {
   background: var(--table-head);
-  color: #ffffff;
+  color: rgba(245, 240, 255, 0.92);
   text-align: left;
 }
 
 .timetable tbody th {
-  background: #fafafa;
+  background: rgba(255, 255, 255, 0.06);
   width: 110px;
+  color: rgba(245, 240, 255, 0.90);
 }
 
 .cell {
   border-radius: 10px;
   font-weight: 600;
+  color: rgba(245, 240, 255, 0.90);
 }
 
 .cell.class {
