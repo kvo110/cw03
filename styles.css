@@ -2,6 +2,7 @@
   styles.css
   CW03 - Dark theme (purple gradient into midnight purple) + animated gradient
   Update: nav bar is fixed to the very top, stays there, and is centered
+  Update: timetable rows are the same height (so 9:00 AM matches the others)
 */
 
 :root {
@@ -225,6 +226,11 @@ a:hover {
   margin-top: 12px;
   min-width: 720px;
   table-layout: fixed;
+}
+
+/* New: force uniform row height so 9:00 AM matches the others */
+.timetable tr {
+  height: 72px;
 }
 
 .timetable caption {
