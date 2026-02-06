@@ -2,7 +2,8 @@
 <!--
   index.html
   CW03 - All Exercises 1–5 on one page
-  Update: added a sticky nav bar with jump links to each exercise section
+  Update: fixed + centered jump nav
+  Update: legend uses the exact labels from the timetable
 -->
 <html lang="en">
 
@@ -22,7 +23,6 @@
       <p class="subtitle">Exercises 1–5 (all answers on one page)</p>
     </div>
 
-    <!-- Sticky nav that jumps to each section -->
     <nav class="exercise-nav" aria-label="Jump to exercises">
       <div class="wrap nav-inner">
         <a class="nav-btn" href="#ex1">Exercise 1</a>
@@ -63,12 +63,16 @@
         <p><strong>Mistake 1:</strong> <span class="mono">font-family</span> has no fallback fonts.</p>
         <p class="mono">Fix: font-family: "Times New Roman", Times, serif;</p>
 
-        <p><strong>Mistake 2:</strong> Missing semicolon after <span class="mono">color: red</span> in <span
-            class="mono">body</span>.</p>
+        <p>
+          <strong>Mistake 2:</strong> Missing semicolon after <span class="mono">color: red</span> in
+          <span class="mono">body</span>.
+        </p>
         <p class="mono">Fix: color: red;</p>
 
-        <p><strong>Mistake 3:</strong> Missing semicolon after <span class="mono">box-sizing: border-box</span> in <span
-            class="mono">.container</span>.</p>
+        <p>
+          <strong>Mistake 3:</strong> Missing semicolon after <span class="mono">box-sizing: border-box</span> in
+          <span class="mono">.container</span>.
+        </p>
         <p class="mono">Fix: box-sizing: border-box;</p>
       </div>
 
@@ -197,6 +201,46 @@ a {
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <div class="timetable-legend" aria-label="Timetable legend">
+        <h3>Legend</h3>
+
+        <div class="legend-grid">
+          <div class="legend-item">
+            <span class="legend-box cell class"></span> Web Programming
+          </div>
+          <div class="legend-item">
+            <span class="legend-box cell class"></span> Operating Systems
+          </div>
+          <div class="legend-item">
+            <span class="legend-box cell class"></span> Programming Lang
+          </div>
+          <div class="legend-item">
+            <span class="legend-box cell class"></span> Math
+          </div>
+          <div class="legend-item">
+            <span class="legend-box cell lab"></span> Lab
+          </div>
+          <div class="legend-item">
+            <span class="legend-box cell meeting"></span> Group Meeting
+          </div>
+          <div class="legend-item">
+            <span class="legend-box cell study"></span> Study
+          </div>
+          <div class="legend-item">
+            <span class="legend-box cell lunch"></span> Lunch
+          </div>
+          <div class="legend-item">
+            <span class="legend-box cell gym"></span> Gym
+          </div>
+          <div class="legend-item">
+            <span class="legend-box cell work"></span> Work
+          </div>
+          <div class="legend-item">
+            <span class="legend-box cell free"></span> Free
+          </div>
+        </div>
       </div>
     </section>
   </main>
